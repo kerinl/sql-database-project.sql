@@ -128,7 +128,7 @@ CREATE TABLE ProjektLK.dbo.Estate (
 
 
 
---------------------------------- POGLEDI --------------------------------------------------
+--------------------------------- VIEWS --------------------------------------------------
 
 
 
@@ -169,6 +169,10 @@ CREATE VIEW vListProjects AS
 SELECT * FROM Project;
 
 
+
+--------------------------------- FUNCTION WITH NESTED QUERY --------------------------------------------------
+
+
 -- dbo.vNewProjects source
 
 CREATE VIEW vNewProjects AS
@@ -201,7 +205,7 @@ CREATE VIEW vSalariesSum AS
 SELECT SUM(Salary) AS SalariesSum FROM Employee;
 
 
---------------------------------- FUNKCIJE --------------------------------------------------
+--------------------------------- FUNCTIONS --------------------------------------------------
 
 CREATE FUNCTION fnGetEmployeeByRole(@role varchar(20))
 RETURNS TABLE
@@ -248,7 +252,7 @@ FROM (
 
 
 
---------------------------------- SHRANJENE PROCEDURE --------------------------------------------------
+--------------------------------- STORED PROCEDURES --------------------------------------------------
 
 CREATE PROCEDURE spAddEmployee(@fname varchar(20),
 @lname varchar(20),@startDate date, @supervisor int, @salary float)
